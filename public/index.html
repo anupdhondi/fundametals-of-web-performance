@@ -25,6 +25,10 @@
     rel="stylesheet" />
 
   <link rel="stylesheet" href="/assets/css/styles.bundle.css" />
+
+  <link rel="preload" as="image" href="/assets/img/hero-desktop.png" />
+  <link rel="preload" as="image" href="/assets/img/hero-mobile.png" />
+
   <script>
     const API_BASE_URL = `${location.protocol}//${location.host}`;
     const STATIC_BASE_URL = `${location.protocol}//${location.host}`;
@@ -58,8 +62,9 @@
 
     <section class="hero">
       <div class="illustration">
-        <img class="desktop" src="/assets/img/hero-desktop.png" alt="Developer Stickers" />
-        <img class="mobile" src="/assets/img/hero-mobile.png" alt="Developer Stickers" />
+        <link rel="preload" as="image" href="/assets/img/hero-desktop.png"/>
+        <img class="desktop" src="/assets/img/hero-desktop.png" alt="Developer Stickers" fetchPriority="high" />
+        <img class="mobile" src="/assets/img/hero-mobile.png" alt="Developer Stickers" fetchPriority="high" />
       </div>
       <!-- NOTE: As of Chrome 129, we can trick it by hiding the LCP element behind a transparent element -->
       <!-- <div class="overlay"></div> -->

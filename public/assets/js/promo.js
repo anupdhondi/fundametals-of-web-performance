@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     innerHTML += `
       <div class="product-card ${product.isPromo ? "promo" : ""}">
         <a href="/products/${product.slug}">
-          <img loading="lazy" src="${STATIC_BASE_URL}${
+          <img loading="lazy" height="1024" width="1024" src="${STATIC_BASE_URL}${
       product.imagePath
     }?promo" alt="${product.name}" ${
       product.isPromo ? 'onload="showPromo()"' : ""
